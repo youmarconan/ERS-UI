@@ -1,0 +1,26 @@
+<h1 class="text-center">ALL USERS</h1>
+
+<table class = "table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name </th>
+            <th>Email</th>
+            <th>USERNAME</th>
+            <th>ROLE</th>
+            <th>ACTIVE STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let UserResponse of users" >
+            <td> {{ UserResponse.id }} </td>
+            <td> {{ UserResponse.firstName }} </td>
+            <td> {{ UserResponse.lastName }} </td>
+            <td> {{ UserResponse.email }} </td>
+            <td> {{ UserResponse.username }} </td>
+            <td> {{ UserResponse.roleName }} </td>
+            <td> {{ UserResponse.active }} </td>
+        </tr>
+    </tbody>
+</table>
