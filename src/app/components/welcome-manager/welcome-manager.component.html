@@ -1,0 +1,32 @@
+<button type="button" id="b" class="btn btn-dark" (click)="logout()">LOG OUT</button>
+<h1>Welcome {{firstName}}!</h1>
+<div>
+    <nav class="navbar">
+
+        <ul class="nav flex-column">
+
+            <li class="navbar-item">
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetALLReimb()">VIEW ALL REIMBURSEMENTS</button>
+            </li>
+
+            <li class="navbar-item">
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetReimbById()">FIND REIMBURSEMENT BY ID</button>
+            </li>
+
+            <li class="navbar-item">
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetReimbByStatus()">FIND REIMBURSEMENT BY STATUS</button>
+            </li>
+
+            <li class="navbar-item">
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetReimbByType()">FIND REIMBURSEMENT BY TYPE</button>
+            </li>
+
+            <li class="navbar-item">
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToApproveOrDenyReimb()">APPROVE OR DENY</button>
+            </li>
+
+        </ul>
+
+    </nav>
+</div>
+

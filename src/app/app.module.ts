@@ -13,6 +13,12 @@ import { GetUserByUsernameComponent } from './components/get-user-by-username/ge
 import { GetUserByEmailComponent } from './components/get-user-by-email/get-user-by-email.component';
 import { RegisterNewUserComponent } from './components/register-new-user/register-new-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { WelcomeManagerComponent } from './components/welcome-manager/welcome-manager.component';
+import { GetAllReimbComponent } from './components/get-all-reimb/get-all-reimb.component';
+import { GetReimbByIdComponent } from './components/get-reimb-by-id/get-reimb-by-id.component';
+import { GetReimbByStatusComponent } from './components/get-reimb-by-status/get-reimb-by-status.component';
+import { GetReimbByTypeComponent } from './components/get-reimb-by-type/get-reimb-by-type.component';
+import { ApproveOrDenyReimbComponent } from './components/approve-or-deny-reimb/approve-or-deny-reimb.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     GetUserByUsernameComponent,
     GetUserByEmailComponent,
     RegisterNewUserComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    WelcomeManagerComponent,
+    GetAllReimbComponent,
+    GetReimbByIdComponent,
+    GetReimbByStatusComponent,
+    GetReimbByTypeComponent,
+    ApproveOrDenyReimbComponent
   ],
   imports: [
     BrowserModule,

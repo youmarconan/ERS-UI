@@ -28,8 +28,16 @@ export class LoginComponent implements OnInit {
       (data: any) => {
         console.log(data)
         this.as.user = data.body; //the user in the UserService gets populated with the API's userResponse data
+        if(this.as.user.roleName == "admin"){
+          this.router.navigate(['admin'])
+        }
+        if(this.as.user.roleName == "manager"){
+          this.router.navigate(['manager'])
+        }
+        // if(this.as.user.roleName == "admin"){
+        //   this.router.navigate(['admin'])
+        // }
         
-        this.router.navigate(['admin'])
       },
 
     )

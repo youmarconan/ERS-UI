@@ -1,4 +1,3 @@
-import { UsersService } from './../../services/users.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
@@ -22,15 +21,15 @@ export class WelcomeAdminComponent implements OnInit {
     this.router.navigate(['allUsers'])
   }
 
-  goToGetGetUserById(){
+  goToGetUserById(){
     this.router.navigate(['userId'])
   }
 
-  goToGetGetUserByUsername(){
+  goToGetUserByUsername(){
     this.router.navigate(['username'])
   }
 
-  goToGetGetUserByEmial(){
+  goToGetUserByEmial(){
     this.router.navigate(['userEmail'])
   }
 

@@ -1,0 +1,51 @@
+<div class="container-fluid bg-light">
+
+    <h3 id="h" class="row">SELECT A TYPE</h3>
+    
+    <label for="TYPE"></label>
+    <select class="form-control" id="TYPE" [(ngModel)] = type>
+      <option>lodging</option>
+      <option>travel</option>
+      <option>food</option>
+      <option>other</option>
+    </select>
+    
+    <button id="btn1" type="button" class="btn btn-dark row" (click)="getReimbByType()">Search</button>
+    
+    </div>
+    
+    <div *ngIf="btn">
+    
+        <table class = "table table-bordered table-hover table-striped table-secondary">
+            <thead class = table-dark>
+                <tr>
+                    <th>ID</th>
+                    <th>AMOUNT</th>
+                    <th>SUBMITTED TIME</th>
+                    <th>RESOLVED TIME</th>
+                    <th>DESCRIPTION</th>
+                    <th>AUTHOR ID</th>
+                    <th>RESOLVER ID</th>
+                    <th>TYPE</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let ReimbResponse of reimbs" >
+                    <td> {{ ReimbResponse.id }} </td>
+                    <td> {{ ReimbResponse.amount }} </td>
+                    <td> {{ ReimbResponse.submitted }} </td>
+                    <td> {{ ReimbResponse.resolved }} </td>
+                    <td> {{ ReimbResponse.description }} </td>
+                    <td> {{ ReimbResponse.authorId }} </td>
+                    <td> {{ ReimbResponse.resolverId }} </td>
+                    <td> {{ ReimbResponse.typeNmae }} </td>
+                    <td> {{ ReimbResponse.statusName }} </td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
+    
+    
+    <button id="btn2" type="button" class="btn btn-dark" (click)="return()">Return</button>

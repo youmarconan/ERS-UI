@@ -1,0 +1,45 @@
+<div class="container-fluid bg-light">
+
+    <h3 id="h" class="row">PLEASE ENTER ID</h3>
+    
+    <input class="text-center row" type="text" placeholder="Reimb ID" [(ngModel)] = id>
+    
+    <button id="btn1" type="button" class="btn btn-dark row" (click)="getReimbById()">Search</button>
+    
+    </div>
+    
+    <div *ngIf="btn">
+    
+    <table class = "table table-bordered table-hover table-striped table-secondary">
+        <thead class = table-dark>
+            <tr>
+                <th>ID</th>
+                <th>AMOUNT</th>
+                <th>SUBMITTED TIME</th>
+                <th>RESOLVED TIME</th>
+                <th>DESCRIPTION</th>
+                <th>AUTHOR ID</th>
+                <th>RESOLVER ID</th>
+                <th>TYPE</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {{ reimb.id }} </td>
+                <td> {{ reimb.amount }} </td>
+                <td> {{ reimb.submitted }} </td>
+                <td> {{ reimb.resolved }} </td>
+                <td> {{ reimb.description }} </td>
+                <td> {{ reimb.authorId }} </td>
+                <td> {{ reimb.resolverId }} </td>
+                <td> {{ reimb.typeNmae }} </td>
+                <td> {{ reimb.statusName }} </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    </div>
+    
+    
+    <button id="btn2" type="button" class="btn btn-dark" (click)="return()">Return</button>

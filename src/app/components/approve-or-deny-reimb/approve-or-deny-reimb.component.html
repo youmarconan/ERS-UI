@@ -1,0 +1,20 @@
+<div class="container-fluid" *ngIf=btn>
+
+    <h5>ENTER THE REIMBURSEMENT'S ID</h5>
+
+    <div class="form-group">
+        <label for="id"></label>
+        <input type="text" class="form-control" id="id" placeholder="UUID" [(ngModel)]= form.reimbursementId >
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn1" (click)="approve()">APPROVE</button>
+        <button type="button" class="btn btn-danger btn1" (click)="deny()">DENY</button>
+    </div>
+
+</div>
+
+
+<button id="btn3" type="button" class="btn btn-dark" (click)="click()" *ngIf=!btn>Update Another User</button>
+
+<button id="btn2" type="button" class="btn btn-dark" (click)="return()">Return</button>
