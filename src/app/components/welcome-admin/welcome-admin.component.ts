@@ -10,9 +10,10 @@ import { Router } from '@angular/router';
 })
 export class WelcomeAdminComponent implements OnInit {
 
-  constructor(private as:AuthService, private us:UsersService, private router: Router) { }
+  constructor(private as:AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    this.firstName
   }
 
   firstName:string = this.as.user.firstName;
@@ -21,26 +22,29 @@ export class WelcomeAdminComponent implements OnInit {
     this.router.navigate(['allUsers'])
   }
 
-  getAllUsers(){
-    this.us.getAllUsers().subscribe(
-
-      (data:any) => {
-        console.log(data)
-        this.us.users = data.body; 
-      }
-    )
+  goToGetGetUserById(){
+    this.router.navigate(['userId'])
   }
 
-  id: string = "e8b266bf-bd32-4c6f-b6e1-1f9b97de1fee";
+  goToGetGetUserByUsername(){
+    this.router.navigate(['username'])
+  }
 
-  getUserById(){
-    this.us.getUserById(this.id).subscribe(
+  goToGetGetUserByEmial(){
+    this.router.navigate(['userEmail'])
+  }
 
-      (data:any) => {
-        console.log(data)
-        this.us.users = data.body; 
-      }
-    )
+  goToRegisterNewUSer(){
+    this.router.navigate(['newUser'])
+  }
+
+  goToUpdateUSer(){
+    this.router.navigate(['user'])
+  }
+
+  logout(){
+    this.as.logout
+    this.router.navigate([''])
   }
 
 }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UserResponse } from './../../models/user-response';
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
@@ -9,7 +10,7 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class GetAllUsersComponent implements OnInit {
 
-  constructor(private us:UsersService) { }
+  constructor(private us:UsersService, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -30,5 +31,9 @@ export class GetAllUsersComponent implements OnInit {
   }
 
   users : UserResponse[] = this.us.users
+
+  return(){
+    this.router.navigate(['admin'])
+  }
 
 }

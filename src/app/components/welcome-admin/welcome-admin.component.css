@@ -3,8 +3,23 @@ nav{
     width:15%;
     margin-left: 2%;
 }
-button{
+.navbarbtn{
     width: 250px;
     margin-top: 20%;
     height: 20mm;
+}
+
+h1{
+   
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#b{
+    margin-left: 90%;
+    margin-top: 2%;
+    width: 150px;
+    height: 12mm;
 }

@@ -1,35 +1,36 @@
+<button type="button" id="b" class="btn btn-dark" (click)="logout()">LOG OUT</button>
 <h1>Welcome {{firstName}}!</h1>
-
 <div>
     <nav class="navbar">
 
         <ul class="nav flex-column">
 
             <li class="navbar-item">
-                <button type="button" class="btn btn-dark" (click)="goToGetALLUsers()">VIEW ALL USERS</button>
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetALLUsers()">VIEW ALL USERS</button>
             </li>
 
             <li class="navbar-item">
-                <button type="button" class="btn btn-dark" >FIND USER BY ID</button>
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetGetUserById()">FIND USER BY ID</button>
             </li>
 
             <li class="navbar-item">
-                <button type="button" class="btn btn-dark">FIND USER BY USERNAME</button>
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetGetUserByUsername()">FIND USER BY USERNAME</button>
             </li>
 
             <li class="navbar-item">
-                <button type="button" class="btn btn-dark">FIND USER BY EMAIL</button>
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToGetGetUserByEmial()">FIND USER BY EMAIL</button>
             </li>
 
             <li class="navbar-item">
-                <button type="button" class="btn btn-dark">REGISTER NEW USER</button>
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToRegisterNewUSer()">REGISTER NEW USER</button>
             </li>
 
             <li class="navbar-item">
-                <button type="button" class="btn btn-dark">UPDATE EXSITING USER</button>
+                <button type="button" class="btn btn-dark navbarbtn" (click)="goToUpdateUSer()">UPDATE EXSITING USER</button>
             </li>
 
         </ul>
 
     </nav>
 </div>
+

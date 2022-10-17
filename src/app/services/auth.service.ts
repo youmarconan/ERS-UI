@@ -28,4 +28,10 @@ export class AuthService {
 
   
   }
+
+  logout(): void {
+
+    this.http.delete("http://ersapi-env.eba-asxkcpjm.us-west-1.elasticbeanstalk.com/revature/auth")
+  
+    }
 }

@@ -1,0 +1,59 @@
+
+
+<div class="container-fluid" *ngIf = btn>
+
+  <h3 id="hh" *ngIf = btn>ENTER USER'S INFO</h3>
+    
+    <div class="form-group">
+      <label for="username">USERNAME</label>
+      <input type="text" class="form-control" id="username" placeholder="USERNAME MUST BE UNIQUE"  [(ngModel)] = user.username>
+    </div>
+
+    <div class="form-group">
+      <label for="email">EMAIL</label>
+      <input type="text" class="form-control" id="email" placeholder="EMAIL MUST BE UNIQUE" [(ngModel)] = user.email>
+    </div>
+
+    <div class="form-group">
+      <label for="password">PASSWORD</label>
+      <input type="password" class="form-control" id="password" placeholder="PASSWORD MUST BE 8 CHARACTERS AT LEAST" [(ngModel)] = user.password>
+    </div>
+
+    <div class="form-group">
+      <label for="firstname">FISRT NAME</label>
+      <input type="text" class="form-control" id="firstname" placeholder="ENTER USER'S FIRST NAME" [(ngModel)] = user.firstName>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">LAST NAME</label>
+      <input type="text" class="form-control" id="lastname" placeholder="ENTER USER'S LAST NAME" [(ngModel)] = user.lastName>
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="isactive">ACTIVE STATUS</label>
+      <select class="form-control" id="isactive" [(ngModel)] = user.isActive>
+        <option>true</option>
+        <option>false</option>
+      </select>
+    </div> -->
+
+    <div class="form-group">
+      <label for="role">ROLE</label>
+      <select class="form-control" id="role" [(ngModel)] = user.userRoleName>
+        <option>admin</option>
+        <option>manager</option>
+        <option>employee</option>
+      </select>
+    </div>
+
+    <button id="btn1" type="button" class="btn btn-dark" (click)="register()">Submit</button>
+
+  </div>
+
+<h3 id="h" *ngIf = !btn>{{id}}</h3>
+
+
+
+<button id="btn3" type="button" class="btn btn-dark" (click)="click()" *ngIf = !btn>Create Another User</button>
+
+<button id="btn2" type="button" class="btn btn-dark" (click)="return()">Return</button>
