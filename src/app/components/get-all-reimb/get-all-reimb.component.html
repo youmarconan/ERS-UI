@@ -11,12 +11,13 @@
             <th>RESOLVER ID</th>
             <th>TYPE</th>
             <th>STATUS</th>
+            <!-- <th>ACTION</th> -->
         </tr>
     </thead>
     <tbody>
         <tr *ngFor = "let ReimbResponse of reimbs" >
             <td> {{ ReimbResponse.id }} </td>
-            <td> {{ ReimbResponse.amount }} </td>
+            <td>$ {{ ReimbResponse.amount }} </td>
             <td> {{ ReimbResponse.submitted }} </td>
             <td> {{ ReimbResponse.resolved }} </td>
             <td> {{ ReimbResponse.description }} </td>
@@ -24,6 +25,7 @@
             <td> {{ ReimbResponse.resolverId }} </td>
             <td> {{ ReimbResponse.typeNmae }} </td>
             <td> {{ ReimbResponse.statusName }} </td>
+            <!-- <td><app-approve-or-deny-reimb></app-approve-or-deny-reimb></td> -->
         </tr>
     </tbody>
 </table>

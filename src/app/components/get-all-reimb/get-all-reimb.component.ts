@@ -29,8 +29,15 @@ export class GetAllReimbComponent implements OnInit {
 
   reimbs : ReimbursementResponse[] =[];
 
+  reimbId : string [] = [];
+
   return(){
     this.router.navigate(['manager'])
   }
+
+  
+
+ 
+  
 
 }
