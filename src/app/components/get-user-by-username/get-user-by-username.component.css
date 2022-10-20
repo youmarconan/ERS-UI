@@ -43,3 +43,10 @@ table{
     padding: 1%;
     margin-left: 25%;
 }
+#p2{
+    color: red;
+    margin-top: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}

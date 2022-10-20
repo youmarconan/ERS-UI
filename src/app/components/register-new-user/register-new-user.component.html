@@ -1,8 +1,8 @@
 
 
-<div class="container-fluid" *ngIf = btn>
+<div class="container-fluid">
 
-  <h3 id="hh" *ngIf = btn>ENTER USER'S INFO</h3>
+  <h3 id="hh" >ENTER USER'S INFO</h3>
     
     <div class="form-group">
       <label for="username">USERNAME</label>
@@ -46,14 +46,14 @@
       </select>
     </div>
 
+    <div>
+      <p *ngIf = !btn>{{id}}</p>
+    </div>
+
     <button id="btn1" type="button" class="btn btn-dark" (click)="register()">Submit</button>
 
   </div>
 
-<h3 id="h" *ngIf = !btn>{{id}}</h3>
 
-
-
-<button id="btn3" type="button" class="btn btn-dark" (click)="click()" *ngIf = !btn>Create Another User</button>
 
 <button id="btn2" type="button" class="btn btn-dark" (click)="return()">Return</button>

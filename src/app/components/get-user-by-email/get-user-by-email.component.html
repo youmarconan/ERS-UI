@@ -4,6 +4,10 @@
     
     <input class="text-center row" type="text" placeholder="User Email" [(ngModel)] = email>
     
+    <div class="form-group" *ngIf =btnn >
+        <p  id="p2" *ngIf = btnn>{{error}}</p>
+    </div>
+
     <button id="btn1" type="button" class="btn btn-dark row" (click)="getUserByEmail()">Search</button>
     
     </div>

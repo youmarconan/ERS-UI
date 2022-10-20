@@ -34,20 +34,33 @@
 
 
 #hh{
-    margin-left: 35%;
+    margin-left: 25%;
     font-size: 24px;
     font-weight: bold;
+
 }
 
+#h{
+    margin-top: 10%;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 16cm;
+    background-color: white;
+    width: fit-content;
+}
 
-p{
+#p1{
     color: green;
     margin-top: 7px;
-    width: fit-content;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    border: green;
-    border-style: solid;
-    border-radius: 10%;
+}
+
+#p2{
+    color: red;
+    margin-top: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }

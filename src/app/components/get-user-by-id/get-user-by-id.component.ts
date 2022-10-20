@@ -17,7 +17,10 @@ export class GetUserByIdComponent implements OnInit {
 
   id : string = "";
   btn : boolean = false;
-  
+
+  btnn: boolean = false;
+  error : string = ''  
+
 
   getUserById(){
     this.us.getUserById(this.id).subscribe(
@@ -26,9 +29,17 @@ export class GetUserByIdComponent implements OnInit {
         this.user = data; 
         console.log(this.us.user)
         console.log(this.user)
+        this.btnn = false;
+        this.btn = true;
+      },
+      Error =>{
+        this.error = Error.error.message
+        console.log(Error)
+        this.btnn = true
+        this.btn = false;
       }
     )
-    this.btn = true;
+    
   }
 
   user : UserResponse = {

@@ -17,7 +17,9 @@ export class GetUserByEmailComponent implements OnInit {
 
   email : string = "";
   btn : boolean = false;
-  
+
+  btnn: boolean = false;
+  error : string = ''  
 
   getUserByEmail(){
     this.us.getUserByEmail(this.email).subscribe(
@@ -26,9 +28,16 @@ export class GetUserByEmailComponent implements OnInit {
         this.user = data; 
         console.log(this.us.user)
         console.log(this.user)
+        this.btnn = false;
+        this.btn = true;
+      },
+      Error =>{
+        this.error = Error.error.message
+        console.log(Error)
+        this.btnn = true
+        this.btn = false;
       }
     )
-    this.btn = true;
   }
 
   user : UserResponse = {

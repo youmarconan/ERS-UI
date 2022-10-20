@@ -33,10 +33,6 @@ export class WelcomeManagerComponent implements OnInit {
     this.router.navigate(['reimbType'])
   }
 
-  goToApproveOrDenyReimb(){
-    this.router.navigate(['status'])
-  }
-
   logout(){
     this.as.logout
     this.router.navigate([''])

@@ -1,4 +1,3 @@
-import { HttpHeaders } from '@angular/common/http';
 import { Credentials } from './../../models/credentials';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -23,6 +22,8 @@ export class LoginComponent implements OnInit {
     password: ""
   }
 
+  error: string =''
+
   loginFunction() {
     this.as.login(this.credentials).subscribe(
       (data: any) => {
@@ -34,11 +35,15 @@ export class LoginComponent implements OnInit {
         if(this.as.user.roleName == "manager"){
           this.router.navigate(['manager'])
         }
-        // if(this.as.user.roleName == "admin"){
-        //   this.router.navigate(['admin'])
-        // }
+        if(this.as.user.roleName == "employee"){
+          this.router.navigate(['employee'])
+        }
         
-      },
+      }, Error =>{
+        this.error = Error.error.message
+        console.log(Error)
+      }
+      
 
     )
 

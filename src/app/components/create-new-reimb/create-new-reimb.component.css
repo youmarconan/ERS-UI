@@ -5,7 +5,7 @@
     margin-left: 47%;
 }
 
-.btn1 {
+#btn1 {
     width: 120px;
     height: 10mm;
     margin-left: 42%;
@@ -33,12 +33,35 @@
 
 
 
-h5{
-    text-align: center;
+#hh{
+    margin-left: 25%;
     font-size: 24px;
     font-weight: bold;
+
 }
 
-/* .btn{
-    width: 100px;
-} */
+#h{
+    margin-top: 10%;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 16cm;
+    background-color: white;
+    width: fit-content;
+}
+
+#p1{
+    color: green;
+    margin-top: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#p2{
+    color: red;
+    margin-top: 7px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+

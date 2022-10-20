@@ -36,4 +36,8 @@ export class GetAllUsersComponent implements OnInit {
     this.router.navigate(['admin'])
   }
 
+  update(id : string){
+    this.us.userId = id
+    this.router.navigate(['user'])
+  }
 }

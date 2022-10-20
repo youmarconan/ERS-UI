@@ -28,6 +28,7 @@
                     <th>RESOLVER ID</th>
                     <th>TYPE</th>
                     <th>STATUS</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,6 +42,18 @@
                     <td> {{ ReimbResponse.resolverId }} </td>
                     <td> {{ ReimbResponse.typeNmae }} </td>
                     <td> {{ ReimbResponse.statusName }} </td>
+                    <div *ngIf=display(ReimbResponse.statusName)>
+                        <td>
+                            <button type="button" class="btn btn-success btn1"(click)="approve(ReimbResponse.id)">APPROVE</button>
+                            <button type="button" class="btn btn-danger btn1" (click)="deny(ReimbResponse.id)">DENY</button>
+                        </td>
+                    </div>
+    
+                    <div *ngIf=!display(ReimbResponse.statusName)>
+                        <td>
+                            <h6>-</h6>
+                        </td>
+                    </div>
                 </tr>
             </tbody>
         </table>

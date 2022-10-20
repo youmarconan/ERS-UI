@@ -12,6 +12,8 @@ export class UsersService {
 
   constructor(private http:HttpClient) { }
 
+  public userId : string = '';
+
   user: UserResponse = {
     id:"",
     username:"",
@@ -54,14 +56,14 @@ export class UsersService {
 
   register(user : UserRequest): Observable<HttpResponse<any>> {
 
-    return this.http.post("http://ersapi-env.eba-asxkcpjm.us-west-1.elasticbeanstalk.com/revature/users", user , {responseType: 'text'}) as unknown as Observable<HttpResponse<any>>
+    return this.http.post("http://ersapi-env.eba-asxkcpjm.us-west-1.elasticbeanstalk.com/revature/users", user) as unknown as Observable<HttpResponse<any>>
 
     
   }
 
   update(user : UpdatedUserRequest): Observable<HttpResponse<any>> {
 
-    return this.http.put("http://ersapi-env.eba-asxkcpjm.us-west-1.elasticbeanstalk.com/revature/users", user , {responseType: 'text'}) as unknown as Observable<HttpResponse<any>>
+    return this.http.put("http://ersapi-env.eba-asxkcpjm.us-west-1.elasticbeanstalk.com/revature/users", user) as unknown as Observable<HttpResponse<any>>
 
     
   }

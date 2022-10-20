@@ -3,6 +3,10 @@
     <h3 id="h" class="row">PLEASE ENTER USERNAME</h3>
     
     <input class="text-center row" type="text" placeholder="Username" [(ngModel)] = username>
+
+    <div class="form-group" *ngIf =btnn >
+        <p  id="p2" *ngIf = btnn>{{error}}</p>
+    </div>
     
     <button id="btn1" type="button" class="btn btn-dark row" (click)="getUserByUsername()">Search</button>
     

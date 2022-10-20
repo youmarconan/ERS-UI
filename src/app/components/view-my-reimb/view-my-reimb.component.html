@@ -28,8 +28,7 @@
         <div *ngIf = display(ReimbResponse.statusName)>
 
             <td>
-                <button type="button" class="btn btn-success btn1" (click)="approve(ReimbResponse.id)">APPROVE</button>
-                <button type="button" class="btn btn-danger btn1" (click)="deny(ReimbResponse.id)">DENY</button>
+                <button type="button" class="btn btn-dark btn1" (click)="update(ReimbResponse.id)">UPDATE</button>
             </td>
         </div>
 
@@ -42,6 +41,5 @@
     </tbody>
 </table>
 
-
-
 <button type="button" class="btn btn-dark btn2" (click)="return()">Return</button>
+

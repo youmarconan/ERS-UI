@@ -20,18 +20,6 @@ export class RegisterNewUserComponent implements OnInit {
   btn: boolean = true;
   id : any ;
 
-  click(){
-    this.btn = true
-    this.user = {
-      username: '',
-      email: '',
-      password: '',
-      firstName: '',
-      lastName: '',
-      isActive: true,
-      userRoleName: ''
-    }
-  }
 
   register(){
     this.us.register(this.user).subscribe(
@@ -43,6 +31,15 @@ export class RegisterNewUserComponent implements OnInit {
 
       this.btn = false;
 
+      this.user = {
+        username: '',
+        email: '',
+        password: '',
+        firstName: '',
+        lastName: '',
+        isActive: true,
+        userRoleName: ''
+      }
 
   }
 

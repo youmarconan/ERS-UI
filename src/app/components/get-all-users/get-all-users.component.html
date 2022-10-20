@@ -9,6 +9,7 @@
             <th>USERNAME</th>
             <th>ROLE</th>
             <th>ACTIVE STATUS</th>
+            <th>ACTION</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,14 @@
             <td> {{ UserResponse.username }} </td>
             <td> {{ UserResponse.roleName }} </td>
             <td> {{ UserResponse.active }} </td>
+
+            <div>
+
+                <td>
+                    <button type="button" class="btn btn-dark btn1" (click)="update(UserResponse.id)">UPDATE</button>
+                </td>
+            </div>
+
         </tr>
     </tbody>
 </table>

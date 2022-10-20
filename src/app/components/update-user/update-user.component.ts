@@ -18,7 +18,7 @@ export class UpdateUserComponent implements OnInit {
   }
 
   btn: boolean = true;
-  id : any ;
+  error : any ;
 
   click(){
     this.btn = true
@@ -29,18 +29,24 @@ export class UpdateUserComponent implements OnInit {
       password: '',
       firstName: '',
       lastName: '',
-      isActive: "false",
+      isActive: "",
       userRoleName: ''
     }
   }
 
   update(){
+    this.updatedUser.userId = this.us.userId
     this.us.update(this.updatedUser).subscribe(
 
       (data:any) => {
-        this.id = data; 
         console.log(data)
-      })
+        this.router.navigate(['allUsers'])
+      },
+      Error =>{
+        this.error = Error.error.message
+        console.log(Error)
+      }
+      )
 
       console.log(this.updatedUser)
 
@@ -55,12 +61,12 @@ updatedUser : UpdatedUserRequest = {
   password: '',
   firstName: '',
   lastName: '',
-  isActive: "false",
+  isActive: "",
   userRoleName: ''
 }
 
   return() {
-    this.router.navigate(['admin'])
+    this.router.navigate(['allUsers'])
   }
 
 

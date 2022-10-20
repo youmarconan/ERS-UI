@@ -1,0 +1,42 @@
+<div class="container-fluid">
+
+    <h3 id="hh">ENTER REIMBURSEMENT'S INFO</h3>
+
+    <!-- <div class="form-group">
+        <label for="id">REIMBURSEMENT'S ID</label>
+        <input type="text" class="form-control" id="id" placeholder="UUID" [(ngModel)]=form.reimbursementId>
+    </div> -->
+
+    <div class="form-group">
+        <label for="amount">AMOUNT</label>
+        <input type="number" class="form-control" id="amount" placeholder="0.00 < AMOUNT < 10000.00"  [(ngModel)] = form.amount>
+      </div>
+
+    <div class="form-group">
+        <label for="description">DESCRIPTION</label>
+        <input type="text" class="form-control" id="description" placeholder="Add a description"
+            [(ngModel)]=form.description>
+    </div>
+
+    <div class="form-group">
+        <label for="type">TYPE</label>
+        <select class="form-control" id="type" [(ngModel)]=form.type>
+            <option>lodging</option>
+            <option>travel</option>
+            <option>food</option>
+            <option>other</option>
+        </select>
+    </div>
+
+    <div class="form-group" *ngIf=!btn>
+        <p id="p2" *ngIf=!btn>{{error}}</p>
+    </div>
+
+    <button id="btn1" type="button" class="btn btn-dark" (click)="update()">Update</button>
+
+</div>
+
+
+
+
+<button id="btn2" type="button" class="btn btn-dark" (click)="return()">Return</button>
